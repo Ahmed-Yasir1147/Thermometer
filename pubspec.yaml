@@ -39,9 +39,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Digital7
+    - family: DigitalNumbers
       fonts:
-        - asset: assets/fonts/digital-7.ttf
+        - asset: assets/fonts/digital_numbers.ttf
  
 
   # For details regarding fonts in packages, see

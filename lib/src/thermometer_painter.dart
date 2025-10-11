@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ThermometerPainter extends CustomPainter {
-  static const int maxCharactersScreenTemperature = 7;
-  static const String screenTextFontFamily = 'Digital7';
+  static const int maxCharactersScreenTemperature = 6;
+  static const String screenTextFontFamily = 'DigitalNumbers';
   final double temperatureC;
   final double animationTemperature;
   final bool showScreenTemperatureInFahrenHeit;
@@ -298,13 +298,13 @@ class ThermometerPainter extends CustomPainter {
     if (showScreenTemperatureInFahrenHeit) {
       final double temperatureF = convertCelsiusToFahrenHeit(temperatureC);
       if (temperatureF.toString().length > maxCharactersScreenTemperature) {
-        modifiedTemperature = temperatureF.toString().substring(0, 8);
+        modifiedTemperature = temperatureF.toString().substring(0, 7);
       } else {
         modifiedTemperature = temperatureF.toString();
       }
     } else {
       if (temperatureC.toString().length > maxCharactersScreenTemperature) {
-        modifiedTemperature = temperatureC.toString().substring(0, 8);
+        modifiedTemperature = temperatureC.toString().substring(0, 7);
       } else {
         modifiedTemperature = temperatureC.toString();
       }
@@ -316,8 +316,9 @@ class ThermometerPainter extends CustomPainter {
           : '$modifiedTemperature°C',
       style: TextStyle(
         color: screenTextColor,
-        fontSize: height * 0.042,
+        fontSize: height * 0.025,
         fontFamily: screenTextFontFamily,
+        package: 'thermometer'
       ),
     );
     final screenTextPainter = TextPainter(
@@ -325,7 +326,7 @@ class ThermometerPainter extends CustomPainter {
       textDirection: TextDirection.ltr,
     );
     screenTextPainter.layout();
-    screenTextPainter.paint(canvas, Offset(width * 0.16, height * 0.89));
+    screenTextPainter.paint(canvas, Offset(width * 0.135, height * 0.9));
   }
 
   @override
