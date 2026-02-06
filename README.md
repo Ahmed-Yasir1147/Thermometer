@@ -15,13 +15,11 @@ This widget will create a thermometer. When widget is created inside a stateful 
 
 ### Installation
 
-Add the following to your pubsec.yaml:
+Add the dependency to your `pubspec.yaml`:
 
-```bash
+```yaml
 dependencies:
-  thermometer:
-    git:
-      url: https://github.com/Ahmed-Yasir1147/Thermometer.git
+  thermometer_widget: ^0.1.0
 ```
 
 And then run following command on terminal:
