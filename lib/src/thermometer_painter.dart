@@ -318,7 +318,7 @@ class ThermometerPainter extends CustomPainter {
         color: screenTextColor,
         fontSize: height * 0.025,
         fontFamily: screenTextFontFamily,
-        package: 'thermometer'
+        package: 'thermometer_widget'
       ),
     );
     final screenTextPainter = TextPainter(
