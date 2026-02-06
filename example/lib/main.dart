@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.only(bottom: height * 0.1),
           child: Thermometer(
             height: 450,
-            temperatureC: 25,
+            temperatureC: temp,
             showScreenTemperatureInFahrenHeit: true,
             backgroundGradient: LinearGradient(
               colors: [Colors.grey.shade400, Colors.grey.shade800],
